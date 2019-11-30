@@ -134,6 +134,7 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/investing"
             android:layout_width="160dp"
             android:layout_height="120dp"
             android:layout_weight="1"
@@ -224,7 +225,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Stock"
+                    android:text="Investments"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 
@@ -322,16 +323,17 @@
             app:cardElevation="2dp">
 
             <RelativeLayout
+                android:id="@+id/btn_invest"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="8dp">
 
                 <TextView
-                    android:id="@+id/Invst6"
+                    android:id="@+id/Investments"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_bold"
-                    android:text="Crypto Currency"
+                    android:text="Stock"
                     android:textColor="#5E5E5E"
                     android:textSize="18dp" />
 

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import java.util.List;
 
-public class FilteredOptions extends AppCompatActivity {
+public class FilteredOptions extends Activity {
 
     List<Investment_options> productList;
     List<Investment_options> updatedList;
