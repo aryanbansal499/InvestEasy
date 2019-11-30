@@ -14,8 +14,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
-    //a list to store all the products
+    FilteredOptions obj = new FilteredOptions();
+    Investments ob = new Investments();
     List<Investment_options> productList;
+    List<Investment_options> updatedList;
+    double score;
+
 
     //the recyclerview
     RecyclerView recyclerView;
