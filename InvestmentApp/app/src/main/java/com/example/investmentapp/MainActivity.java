@@ -14,7 +14,6 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
-    FilteredOptions obj = new FilteredOptions();
     Investments ob = new Investments();
     List<Investment_options> productList;
     List<Investment_options> updatedList;
@@ -38,11 +37,10 @@ public class MainActivity extends AppCompatActivity{
         // calculate the score from the above data (logic coded)
         score = input.getScore();
 
-        // dummy products generation
-        productList = obj.getProductList();
+//        // dummy products generation
+//        productList = obj.getProductList();
 
-        // update the order of the product lists based on the score
-        updatedList = ob.generateNewList(productList, score);
+
 
         
         //getting the recyclerview from xml
@@ -60,7 +58,7 @@ public class MainActivity extends AppCompatActivity{
                         1,
                         "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
                         "13.3 inch, Silver, 1.35 kg",
-                        4.3,
+                        75,
                         60000,
                         R.drawable.download));
 
@@ -69,7 +67,7 @@ public class MainActivity extends AppCompatActivity{
                         1,
                         "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
                         "14 inch, Gray, 1.659 kg",
-                        4.3,
+                        48,
                         60000,
                         R.drawable.house));
 
@@ -78,12 +76,17 @@ public class MainActivity extends AppCompatActivity{
                         1,
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",
-                        4.3,
+                        88,
                         60000,
                         R.drawable.house));
 
+
+
+        // update the order of the product lists based on the score
+        updatedList = ob.generateNewList(productList, score);
+
         //creating recyclerview adapter
-        ProductAdapter adapter = new ProductAdapter(this, productList);
+        ProductAdapter adapter = new ProductAdapter(this, updatedList);
 
         //setting adapter to recyclerview
         recyclerView.setAdapter(adapter);
