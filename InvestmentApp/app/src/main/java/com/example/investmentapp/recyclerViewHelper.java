@@ -24,7 +24,6 @@ public class recyclerViewHelper extends RecyclerView.Adapter<recyclerViewHelper.
             this.productList = productList;
         }
 
-        @Override
         public ProductViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             //inflating and returning our view holder
             LayoutInflater inflater = LayoutInflater.from(mCtx);
@@ -32,7 +31,7 @@ public class recyclerViewHelper extends RecyclerView.Adapter<recyclerViewHelper.
             return new ProductViewHolder(view);
         }
 
-        @Override
+
         public void onBindViewHolder(ProductViewHolder holder, int position) {
             //getting the product of the specified position
             Investment_options product = productList.get(position);
