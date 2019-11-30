@@ -2,21 +2,20 @@ package com.example.investmentapp;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import java.util.List;
 
-public class FilteredOptions extends Activity {
+public class FilteredOptions extends AppCompatActivity {
 
     List<Investment_options> productList;
+    List<Investment_options> updatedList;
+    Investments ob = new Investments();
+    double score;
 
     //the recyclerview
     RecyclerView recyclerView;
@@ -24,7 +23,13 @@ public class FilteredOptions extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_products);
+        setContentView(R.layout.filtered_options);
+
+        // generates the normalised age and income (currently hard coded)
+        Imputation input = new Imputation(100000, 25);
+
+        // calculate the score from the above data (logic coded)
+        score = input.getScore();
 
         //getting the recyclerview from xml
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
@@ -65,15 +70,17 @@ public class FilteredOptions extends Activity {
                         60000,
                         R.drawable.house));
 
+
+        // update the order of the product lists based on the score
+        updatedList = ob.generateNewList(productList, score);
+
         //creating recyclerview adapter
-        //ProductAdapter adapter = new (this, productList);
+        ProductAdapter adapter = new ProductAdapter(this, updatedList);
 
         //setting adapter to recyclerview
-       // recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapter);
     }
 
-    public List<Investment_options> getProductList() {
-        return productList;
-    }
+
 }
 
