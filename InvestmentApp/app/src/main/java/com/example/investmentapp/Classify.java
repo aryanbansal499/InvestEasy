@@ -20,14 +20,27 @@ public class Classify {
 
     private ImageView iv;
 
+    HashMap<Integer, String> map = new HashMap<Integer, String>();
+
     public  void generate() {
-        HashMap<Integer, String> map = new HashMap<Integer, String>();
 
         for(int i=0;i<imageID.length;i++) {
             map.put(scores[i], imageID[i]);
         }
 
     }
+
+    // match the scores and sort the hash map to the ordering of the user and display it
+    public void matchAndDisplay() {
+
+    }
+
+    // generate the scores based on the classification data
+    public void calculateScore() {
+
+    }
+
+
 
 
 }
