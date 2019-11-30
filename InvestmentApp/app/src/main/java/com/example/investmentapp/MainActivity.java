@@ -15,7 +15,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity{
 
     //a list to store all the products
-    List<Product> productList;
+    List<Investment_options> productList;
 
     //the recyclerview
     RecyclerView recyclerView;
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity{
 
         //adding some items to our list
         productList.add(
-                new Product(
+                new Investment_options(
                         1,
                         "Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)",
                         "13.3 inch, Silver, 1.35 kg",
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity{
                         R.drawable.download));
 
         productList.add(
-                new Product(
+                new Investment_options(
                         1,
                         "Dell Inspiron 7000 Core i5 7th Gen - (8 GB/1 TB HDD/Windows 10 Home)",
                         "14 inch, Gray, 1.659 kg",
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity{
                         R.drawable.house));
 
         productList.add(
-                new Product(
+                new Investment_options(
                         1,
                         "Microsoft Surface Pro 4 Core m3 6th Gen - (4 GB/128 GB SSD/Windows 10)",
                         "13.3 inch, Silver, 1.35 kg",

@@ -24,10 +24,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     private Context mCtx;
 
     //we are storing all the products in a list
-    private List<Product> productList;
+    private List<Investment_options> productList;
 
     //getting the context and product list with constructor
-    public ProductAdapter(Context mCtx, List<Product> productList) {
+    public ProductAdapter(Context mCtx, List<Investment_options> productList) {
         this.mCtx = mCtx;
         this.productList = productList;
     }
@@ -43,7 +43,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     @Override
     public void onBindViewHolder(ProductViewHolder holder, int position) {
         //getting the product of the specified position
-        Product product = productList.get(position);
+        Investment_options product = productList.get(position);
 
         //binding the data with the viewholder views
         holder.textViewTitle.setText(product.getTitle());

@@ -1,23 +1,20 @@
 package com.example.investmentapp;
 
-/**
- * Created by Belal on 10/18/2017.
- */
+public class Investment_options implements Comparable< Investment_options > {
 
 
-public class Product {
     private int id;
     private String title;
     private String shortdesc;
-    private double rating;
+    private double score;
     private double price;
     private int image;
 
-    public Product(int id, String title, String shortdesc, double rating, double price, int image) {
+    public Investment_options(int id, String title, String shortdesc, double score, double price, int image) {
         this.id = id;
         this.title = title;
         this.shortdesc = shortdesc;
-        this.rating = rating;
+        this.score = score;
         this.price = price;
         this.image = image;
     }
@@ -35,7 +32,7 @@ public class Product {
     }
 
     public double getRating() {
-        return rating;
+        return score;
     }
 
     public double getPrice() {
@@ -44,6 +41,20 @@ public class Product {
 
     public int getImage() {
         return image;
+    }
+
+    public void setScore(double score) { this.score = score; }
+
+    @Override
+    public int compareTo(Investment_options o) {
+        if (this.getRating() > (o.getRating())) {
+            return 1;
+        }
+        else if (this.getRating() < (o.getRating())) {
+            return -1;
+        }
+        else
+            return 0;
     }
 }
 
