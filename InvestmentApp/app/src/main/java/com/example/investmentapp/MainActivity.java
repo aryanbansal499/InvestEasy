@@ -22,9 +22,25 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.filtered_options);
 
+
+        // generates the normalised age and income (currently hard coded)
+        Imputation input = new Imputation(100000, 25);
+
+        // calculate the score from the above data (logic coded)
+        score = input.getScore();
+
+        // dummy products generation
+        productList = obj.getProductList();
+
+        // update the order of the product lists based on the score
+        updatedList = ob.generateNewList(productList, score);
+
+        
         //getting the recyclerview from xml
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
