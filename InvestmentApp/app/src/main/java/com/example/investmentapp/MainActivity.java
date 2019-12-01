@@ -14,7 +14,7 @@ import androidx.cardview.widget.CardView;
 public class MainActivity extends AppCompatActivity{
 
 
-
+    CardView investBtn;
 
 
     @Override
@@ -23,16 +23,16 @@ public class MainActivity extends AppCompatActivity{
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        CardView card_view = (CardView) findViewById(R.id.abc); // creating a CardView and assigning a value.
 
-        CardView investBtn = (CardView) findViewById(R.id.investing);
-
-        investBtn.setOnClickListener(new View.OnClickListener() {
+        card_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(MainActivity.this,PersonalProfile.class);
-                //intent.putExtra("Type","Weekly");
                 startActivity(intent);
 
+                // do whatever you want to do on click (to launch any fragment or activity you need to put intent here.)
             }
         });
 
@@ -40,5 +40,8 @@ public class MainActivity extends AppCompatActivity{
 
 
 
+    }
+
+    public void setIntent(View view) {
     }
 }

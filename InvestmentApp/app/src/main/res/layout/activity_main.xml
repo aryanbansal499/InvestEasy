@@ -39,7 +39,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp">
+        android:layout_marginTop="22dp"
+        android:id = "@+id/abc">
 
         <LinearLayout
             android:id="@+id/profile_block1"
@@ -76,24 +77,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_medium"
-                    android:text="Accenture Stock"
-                    android:textColor="#ffff"
-                    android:textSize="24dp" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                </RelativeLayout>
-
-
-            </LinearLayout>
+                android:orientation="horizontal"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -135,6 +119,7 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/investing"
+            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="120dp"
             android:layout_weight="1"
@@ -156,6 +141,7 @@
                     android:textSize="18dp" />
 
                 <ImageView
+                    android:id="@+id/in"
                     android:layout_width="wrap_content"
                     android:layout_height="80dp"
                     android:layout_alignParentRight="true"
@@ -167,6 +153,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="120dp"
             android:layout_marginLeft="18dp"
@@ -209,6 +196,7 @@
         android:orientation="horizontal">
 
         <androidx.cardview.widget.CardView
+            android:clickable="true"
             android:layout_width="160dp"
             android:layout_height="120dp"
             android:layout_weight="1"
@@ -243,7 +231,7 @@
     <androidx.cardview.widget.CardView
             android:layout_width="160dp"
             android:layout_height="120dp"
-            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
             android:layout_weight="1"
             app:cardCornerRadius="8dp"
             app:cardElevation="2dp">

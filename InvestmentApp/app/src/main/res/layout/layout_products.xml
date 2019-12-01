@@ -1,74 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/bg1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        >
+
+        <TextView
+            android:id="@+id/textViewTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/textViewTitle"
+            android:layout_toRightOf="@id/imageView"
+            android:text="Tesla Share Hold"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:padding="4dp"
+            tools:ignore="DuplicateIds"
+            tools:src="@drawable/tesla" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_marginLeft="4dp"
+            android:layout_toRightOf="@id/imageView"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#FFFFFF"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewShortDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:textColor="#FFFFFF"
+            android:text="−1.35 (0.41%)"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewShortDesc"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="4.8"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewRating"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="$ 329.94"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            tools:ignore="DuplicateIds" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:padding="4dp"
+            android:src="@drawable/face"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="Facebook Share Hold"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#ffff"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewShortDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="−0.36 (0.18%)"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewShortDesc"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="4.7"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewRating"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="$ 201.64"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="4dp"
+            tools:ignore="DuplicateIds"
+            tools:src="@drawable/real" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="Melbourne Land Price"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            android:textColor="#FFF"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewShortDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="       "
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewShortDesc"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="3.1"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewRating"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="more information"
+            android:textColor="#FFFFFF"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:padding="4dp"
+            android:textColor="#FFFFFF"
+            android:src="@drawable/gold"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#FFFFFF"
+            android:layout_toRightOf="@id/imageView"
+            android:text="Gold Price Per Ounce"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewShortDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_below="@id/textViewTitle"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="+7.89"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewShortDesc"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:background="@color/colorPrimary"
+            android:textColor="#FFFFFF"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="3"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds" />
+
+        <TextView
+            android:id="@+id/textViewPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textViewRating"
+            android:textColor="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imageView"
+            android:text="$ 1,466.29"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            tools:ignore="DuplicateIds" />
+
+    </RelativeLayout>
+
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="8dp">
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="120dp"
-                android:layout_height="90dp"
-                android:padding="4dp" />
-
-            <TextView
-                android:id="@+id/textViewTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_toRightOf="@id/imageView"
-                android:text="Apple MacBook Air Core i5 5th Gen - (8 GB/128 GB SSD/Mac OS Sierra)"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-                android:textColor="#000000" />
-
-            <TextView
-                android:id="@+id/textViewShortDesc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewTitle"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/imageView"
-                android:text="13.3 Inch, 256 GB"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small" />
-
-            <TextView
-                android:id="@+id/textViewRating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewShortDesc"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/imageView"
-                android:background="@color/colorPrimary"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:text="4.7"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small.Inverse"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textViewPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/textViewRating"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_toRightOf="@id/imageView"
-                android:text="INR 56990"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                android:textStyle="bold" />
-
-        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
 

@@ -19,6 +19,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PersonalProfile"></activity>
+        <activity android:name=".FilteredOptions"></activity>
+
     </application>
 
 </manifest>
